@@ -9,9 +9,19 @@ export const font = css`
 
 export const shape = css`
   border: none;
+  outline: 0;
   border-radius: 5px;
   padding: 10px 20px;
+  cursor: pointer;
 `;
+
+export const color = css({
+  backgroundColor: '#1f8e83'
+})
+
+export const hoverColor = css({
+  ':hover': color
+})
 
 export const primaryColors = css`
   background: #26a69a;

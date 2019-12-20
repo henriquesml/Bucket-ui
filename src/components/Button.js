@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { font, primaryColors, shape } from "config/styles";
+import { font, primaryColors, shape, hoverColor } from "config/styles";
 
 const Btn = styled.button`
-  ${font}; ${primaryColors}; ${shape};
+  ${font}; ${primaryColors}; ${shape}; ${hoverColor};
 `;
 
 export default function Button({ text }) {
