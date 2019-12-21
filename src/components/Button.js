@@ -56,7 +56,7 @@ const options = {
 
 const VldOptions = ['primary', 'artia']
 
-export default function Button({ size, onClick, disabled, text, stylization }) {
+export default function Button({ size, style, onClick, disabled, text, stylization }) {
 
 	var change = options.primary.__emotion_styles[1].styles
 
@@ -65,8 +65,8 @@ export default function Button({ size, onClick, disabled, text, stylization }) {
 	}
 	return (
 	<button 
-		style={{fontSize: Button.sizes[size]}}
-    	css={css`${change}`} 
+		style={style}
+    	css={css`${change} font-size: ${Button.sizes[size]}`} 
 	 	onClick={onClick} 
 	 	disabled={disabled} 
 	 	stylization={stylization}
@@ -77,12 +77,9 @@ export default function Button({ size, onClick, disabled, text, stylization }) {
 }
 Button.propTypes = {
   size: PropTypes.oneOf(['small', 'normal', 'large']),
-  
   stylization: PropTypes.oneOf(VldOptions),
-	/** Disable button */
-	disabled: PropTypes.bool,
-	/** Gets called when the user clicks on the button */
-	onClick: PropTypes.func,
+  disabled: PropTypes.bool,	
+  onClick: PropTypes.func,
 };
 Button.defaultProps = {
 	size: 'normal'

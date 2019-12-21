@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import styled from "@emotion/styled";
 import { css } from "@emotion/core";
 import PropTypes from 'prop-types';
@@ -20,28 +20,24 @@ const pmry = styled.button`
 
 const VldOptions = ['primary', 'artia']
 
-export default function Input(props, { size, stylization }) {
-    const [value, setValue] = useState('')
+export default function Input(props, { size, type, style, stylization, id, value, onChange }) {
 
-    function changeValue(event) {
-      setValue(event.target.value)
-    }
-    console.log(Input.sizes[size])
-  return <input
-        id={1}
-        css={css`${pmry.__emotion_styles[1].styles}`} 
-        style={{fontSize: Input.sizes[size]}}
-        type="text"
-        value={value}
-        placeholder={props.placeholder}
-        onChange={changeValue.bind(this)}
+  return (
+    <input
+      id={id}
+      type={type}
+      css={css`${pmry.__emotion_styles[1].styles}`} 
+      style={style}
+      value={value}
+      placeholder={props.placeholder}
+      onChange={props.onChange}
     />
-  ;
+  );
 }
-console.log(Input)
 Input.propTypes = {
   size: PropTypes.oneOf(['small', 'normal', 'large']),
-  stylization: PropTypes.oneOf(VldOptions)
+  stylization: PropTypes.oneOf(VldOptions),
+  onChange: PropTypes.func,
 
 };
 Input.defaultProps = {
