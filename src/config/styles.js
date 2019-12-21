@@ -16,7 +16,7 @@ export const shape = css`
 `;
 
 export const color = css({
-  backgroundColor: '#1f8e83'
+  backgroundColor: '#12b8ac'
 })
 
 export const hoverColor = css({
