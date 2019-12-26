@@ -3,5 +3,5 @@ A very simple input.
 ```jsx
 import Input from "./Input";
 
-<Input placeholder="Your Name" size='normal' />
+<Input placeholder="Seu nome" size='normal' />
 ```
