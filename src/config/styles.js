@@ -42,19 +42,19 @@ export const ButtonStyle = styled.button`
 `;
 
 /* Inputs */
-export const pmryInput = styled.button`
+export const InputStyle = styled.input`
   
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
 	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
 	background-color:#ffffff;
 	border-radius:3px;
 	border: 1px solid #ccc;
-  display:inline-block;
-  color:#495057;
+  	display:inline-block;
+  	color:#495057;
 	font-family:Arial;
 	font-size:14px;
-  padding:6px 12px;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  	padding:6px 12px;
+  	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 `;
 
 /* Selects */

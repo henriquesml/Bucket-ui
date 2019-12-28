@@ -1,35 +1,23 @@
 import React from "react";
-import { css } from "@emotion/core";
 import PropTypes from 'prop-types';
-import { pmryInput } from '../config/styles'
+import { InputStyle } from '../config/styles'
 
-const VldOptions = ['primary', 'artia']
-
-export default function Input(props, { size, type, style, stylization, id, value, onChange }) {
+export default function Input(props) {
 
   return (
-    <input
-      id={id}
-      type={type}
-      css={css`${pmryInput.__emotion_styles[1].styles}`} 
-      style={style}
-      value={value}
+    <InputStyle
+      id={props.id}
+      type={props.type}
+      style={props.style}
+      value={props.value}
       placeholder={props.placeholder}
       onChange={props.onChange}
     />
   );
 }
 Input.propTypes = {
-  size: PropTypes.oneOf(['small', 'normal', 'large']),
-  stylization: PropTypes.oneOf(VldOptions),
+  size: PropTypes.oneOf('small', 'normal', 'large'),
+  stylization: PropTypes.oneOf(['artia']),
   onChange: PropTypes.func,
 
-};
-Input.defaultProps = {
-	size: 'normal'
-};
-Input.sizes = {
-	small: '11px',
-	normal: '13px',
-	large: '18px',
 };
