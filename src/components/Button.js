@@ -1,45 +1,24 @@
 import React from "react";
-import { css } from "@emotion/core";
 import PropTypes from 'prop-types';
-import { pmryButton, artiaButton } from '../config/styles'
+import { ButtonStyle } from '../config/styles'
 
-const options = {
-	primary: pmryButton,
-	artia: artiaButton
-}
+export default function Button({ size, style, onClick, disabled, text, stylization}) {
 
-const VldOptions = ['primary', 'artia']
-
-export default function Button({ size, style, onClick, disabled, text, stylization }) {
-
-	var change = options.primary.__emotion_styles[1].styles
-
-	if (stylization != undefined, VldOptions.includes(stylization)){
-		change = options[stylization].__emotion_styles[1].styles
-	}
 	return (
-	<button 
-		style={style}
-    	css={css`${change} font-size: ${Button.sizes[size]}`} 
-	 	onClick={onClick} 
-	 	disabled={disabled} 
-	 	stylization={stylization}
-	>
-		{text}
-	</button>
+		<ButtonStyle
+			style={style}
+			onClick={onClick} 
+			disabled={disabled} 
+			stylization={stylization}
+			size={size == undefined ? 'normal': size}
+		>
+			{text}
+		</ButtonStyle>
 	);
 }
 Button.propTypes = {
   size: PropTypes.oneOf(['small', 'normal', 'large']),
-  stylization: PropTypes.oneOf(VldOptions),
+  stylization: PropTypes.oneOf(['artia']),
   disabled: PropTypes.bool,	
   onClick: PropTypes.func,
-};
-Button.defaultProps = {
-	size: 'normal'
-};
-Button.sizes = {
-	small: '11px',
-	normal: '13px',
-	large: '18px',
 };

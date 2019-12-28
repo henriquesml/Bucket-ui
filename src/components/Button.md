@@ -2,7 +2,7 @@
 ```jsx
 import Button from "./Button";
 
-<Button text='Nova atividade' size="normal" stylization='primary' />
+<Button text='Nova atividade' size="normal" />
 
 ```
 ### Artia
