@@ -3,17 +3,41 @@
 import Button from "./Button";
 
 <Button text='Nova atividade' size="normal" />
-
 ```
 ### Artia
 ```jsx
-<Button text='Nova atividade' size="small" theme='artia' />
+import Button from "./Button";
+
+<Button text='Nova atividade' size="normal" theme='artia' />
 ```
 
-### Propriedades: 
+### Fleeg
+```jsx
+import Button from "./Button";
+
+<Button text='Nova atividade' size="normal" theme='fleeg' />
+```
+
+### Twygo
+```jsx
+import Button from "./Button";
+
+<Button text='Nova atividade' size="normal" theme='twygo' />
+```
+
+<br/>
+
+### Error
+```jsx
+import Button from "./Button";
+
+<Button text='Nova atividade' size="normal" theme='twygo' error={true} />
+```
+
+### <span style="color:blue">Propriedades: </span> 
 
 - <span style="color:blue">Text</span><br/>Texto do botão<br/>
 
 - <span style="color:blue">Size</span><br/>Tamanho do botão (small, normal e large)<br/>
 
-- <span style="color:blue">theme</span><br/>Estilos do botão (artia, twigo e fleeg)
+- <span style="color:blue">theme</span><br/>Estilos do botão (artia, twygo e fleeg)

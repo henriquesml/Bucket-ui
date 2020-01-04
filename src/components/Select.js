@@ -28,6 +28,7 @@ Select.propTypes = {
 export function Option(props) {
   return (
     <option 
+      defaultValue={props.defaultValue}
       value={props.value} 
       selected={props.selected} 
       disabled={props.disabled} 

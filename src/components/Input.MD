@@ -5,13 +5,20 @@ import Input from "./Input";
 
 <Input placeholder="Seu nome" size='normal' />
 ```
+
+```jsx
+import Input from "./Input";
+
+<Input placeholder="Seu email" error={true} size='normal' />
+```
+
 ### Propriedades: 
 
 - <span style="color:blue">Id [string]</span><br/>O ID do componente.<br/>
 
 - <span style="color:blue">Type [string]</span><br/>Tipo do componente, deve ser um tipo de entrada válido conforme o HTML5.<br/>
 
-- <span style="color:blue">theme [string]</span><br/>Estilos do inpcomponenteut (artia, twigo e fleeg).<br/>
+- <span style="color:blue">theme [string]</span><br/>Estilos do inpcomponenteut (artia, twygo e fleeg).<br/>
 
 - <span style="color:blue">style [object]</span><br/>Sobrescreva os estilos padrões do componente, deve ser um tipo de entrada válido conforme o CSS3.<br/>
 

@@ -20,9 +20,28 @@ color:#FFF;
 }
 `
 
+const ErrorInput = css`
+
+outline-color: transparent;
+border: 1px solid #f81c3f;
+
+::-webkit-input-placeholder { /* Edge */
+  color: #f81c3f;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #f81c3f;
+}
+
+::placeholder {
+  color: #f81c3f;
+}
+`
+
 const Index = {
     artia: ArtiaButton,
-    fleeg: FleegButton
+    fleeg: FleegButton,
+    error: ErrorInput
 }
 
 export default Index

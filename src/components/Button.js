@@ -7,6 +7,17 @@ export default function Button(props) {
 	return (
 		<ButtonStyle
 			style={props.style}
+			name={props.name}
+			autoFocus={props.autofocus}
+			autocomplete={props.autocomplete}
+			error={props.error}
+			form={props.form}
+			formaction={props.formaction}
+			formenctype={props.formenctype}
+			formmethod={props.formmethod}
+			formnovalidate={props.formnovalidate}
+			formtarget={props.formtarget}
+			type={props.type}
 			onClick={props.onClick} 
 			disabled={props.disabled} 
 			theme={props.theme}
@@ -18,7 +29,7 @@ export default function Button(props) {
 }
 Button.propTypes = {
   size: PropTypes.oneOf(['small', 'normal', 'large']),
-  stylization: PropTypes.oneOf(['artia']),
+  theme: PropTypes.oneOf(['artia', 'fleeg', 'twygo']),
   disabled: PropTypes.bool,	
   onClick: PropTypes.func,
 };

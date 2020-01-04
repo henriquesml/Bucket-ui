@@ -30,6 +30,8 @@ export const ButtonStyle = styled.button`
 	}
 
 	${props => props.theme in themes.Button && themes.Button[props.theme]}
+
+	${props => props.error && themes.Button['error']}
 `;
 
 /* Inputs */
@@ -45,7 +47,9 @@ export const InputStyle = styled.input`
 	font-family:Arial;
 	font-size:14px;
   	padding:6px 12px;
-  	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	outline-color: #D9D9D9;
+
+	${props => props.error && themes.Input['error']}
 `;
 
 /* Selects */
@@ -74,7 +78,9 @@ export const NavbarStyle = styled.header`
   height: 10vh;
   background-color: #F9F9F9;
   align-items: center;
-
+  -webkit-box-shadow: 0 8px 6px -6px #C9C9C9;
+  -moz-box-shadow: 0 8px 6px -6px #C9C9C9;
+  box-shadow: 0 8px 8px -6px #C9C9C9;
   ${props => props.theme in themes.NavBar && themes.NavBar[props.theme]}
 `;
 

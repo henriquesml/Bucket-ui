@@ -5,12 +5,17 @@ background-color: #00c1b3;
 `
 
 const FleegNavBar = css`
-background-color: #61dafb;
+background-color: #29bff5;
+`
+
+const TwygoNavBar = css`
+background-color:#9349de;
 `
 
 const Index = {
     artia: ArtiaNavBar,
-    fleeg: FleegNavBar
+    fleeg: FleegNavBar,
+    twygo: TwygoNavBar
 }
 
 export default Index
