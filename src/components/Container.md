@@ -1,4 +1,4 @@
-## Em Progresso
+### Em Progresso
 
 Exemplo de uso do componente Container
 
@@ -7,8 +7,8 @@ import Narbar from "./NavBar";
 import Container from "./Container";
 import Button from "./Button";
 
-<Container 
-  color='#E9E9E9'
+<Container
+  style={{background: '#E9E9E9'}}
   width='100%'
   height='100px'
 >

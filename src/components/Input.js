@@ -8,7 +8,9 @@ export default function Input(props) {
     <InputStyle
       id={props.id}
       type={props.type}
+      theme={props.theme}
       style={props.style}
+      error={props.error}
       value={props.value}
       placeholder={props.placeholder}
       onChange={props.onChange}
@@ -17,7 +19,8 @@ export default function Input(props) {
 }
 Input.propTypes = {
   size: PropTypes.oneOf('small', 'normal', 'large'),
-  stylization: PropTypes.oneOf(['artia']),
+  theme: PropTypes.oneOf(['artia', 'fleeg']),
   onChange: PropTypes.func,
+  error: PropTypes.bool,
 
 };

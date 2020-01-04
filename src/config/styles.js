@@ -82,7 +82,7 @@ export const ContainerStyle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  width: ${props => props.width };
+  flex-direction: ${props => props.direction != undefined ? props.direction : 'column' };
+  width: ${props => props.width};
   height: ${props => props.height};
 `;
