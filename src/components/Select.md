@@ -1,14 +1,13 @@
 ### Padrão
 ```jsx
-import Select from "./Select";
-import SelectOption from "./SelectOption";
+import {Select, Option} from "./Select";
 
 <Select size='small'>
-    <SelectOption value='none' selected disabled hidden >Selecione banco</SelectOption>
-    <SelectOption value='237'>Bradesco</SelectOption>
-    <SelectOption value='104'>Caixa Econômica Federal</SelectOption>
-    <SelectOption value='756'>Sicoob</SelectOption>
-    <SelectOption value='001'>Banco do Brasil</SelectOption>
+    <Option value='none' selected disabled hidden >Selecione banco</Option>
+    <Option value='237'>Bradesco</Option>
+    <Option value='104'>Caixa Econômica Federal</Option>
+    <Option value='756'>Sicoob</Option>
+    <Option value='001'>Banco do Brasil</Option>
 </Select>
 ```
 

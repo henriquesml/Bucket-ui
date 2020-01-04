@@ -1,37 +1,43 @@
 import React from "react";
-import { css } from "@emotion/core";
 import PropTypes from 'prop-types';
-import {pmrySelect} from '../config/styles'
+import { SelectStyle } from '../config/styles'
 
-const VldOptions = ['primary', 'artia']
-
-export default function Select(props, { size, style, stylization, value, onChange }) {
+export function Select(props) {
 
   return (
-    <select
-      id={1}
-      css={css`${pmrySelect.__emotion_styles[1].styles}`} 
-      style={style}
-      type="text"
-      value={value}
+    <SelectStyle
+      id={props.id}
+      theme={props.theme}
+      style={props.style}
+      type={props.type}
+      value={props.value}
       placeholder={props.placeholder}
-      onChange={onChange}
+      onChange={props.onChange}
     >
       {props.children}
-    </select>
+    </SelectStyle>
   );
 }
 Select.propTypes = {
   size: PropTypes.oneOf(['small', 'normal', 'large']),
-  stylization: PropTypes.oneOf(VldOptions),
+  theme: PropTypes.oneOf(['primary', 'artia']),
   onChange: PropTypes.func,
 
 };
-Select.defaultProps = {
-	size: 'normal'
-};
-Select.sizes = {
-	small: '11px',
-	normal: '13px',
-	large: '18px',
+
+export function Option(props) {
+  return (
+    <option 
+      value={props.value} 
+      selected={props.selected} 
+      disabled={props.disabled} 
+      hidden={props.hidden}
+    >{props.children}</option>
+  );
+}
+
+Option.propTypes = {
+  selected: PropTypes.bool,	
+  disabled: PropTypes.bool,	
+  hidden: PropTypes.bool,	
 };

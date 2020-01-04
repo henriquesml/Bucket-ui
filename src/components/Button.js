@@ -2,17 +2,17 @@ import React from "react";
 import PropTypes from 'prop-types';
 import { ButtonStyle } from '../config/styles'
 
-export default function Button({ size, style, onClick, disabled, text, stylization}) {
+export default function Button(props) {
 
 	return (
 		<ButtonStyle
-			style={style}
-			onClick={onClick} 
-			disabled={disabled} 
-			stylization={stylization}
-			size={size == undefined ? 'normal': size}
+			style={props.style}
+			onClick={props.onClick} 
+			disabled={props.disabled} 
+			theme={props.theme}
+			size={props.size}
 		>
-			{text}
+			{props.text}
 		</ButtonStyle>
 	);
 }

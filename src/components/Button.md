@@ -7,11 +7,13 @@ import Button from "./Button";
 ```
 ### Artia
 ```jsx
-<Button text='Nova atividade' size="normal" stylization='artia' />
+<Button text='Nova atividade' size="small" theme='artia' />
 ```
 
 ### Propriedades: 
 
-- Text, texto do botão
-- Size, tamanho do botão (small, normal e large)
-- stylization, estilos do botão (primary, artia)
+- <span style="color:blue">Text</span><br/>Texto do botão<br/>
+
+- <span style="color:blue">Size</span><br/>Tamanho do botão (small, normal e large)<br/>
+
+- <span style="color:blue">theme</span><br/>Estilos do botão (artia, twigo e fleeg)

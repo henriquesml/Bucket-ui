@@ -1,5 +1,6 @@
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
+import themes from '../themes'
 
 /* Botões */
 const buttonsize = {
@@ -17,7 +18,7 @@ export const ButtonStyle = styled.button`
 	cursor:pointer;
 	color:#495057;
 	font-family:Arial;
-	font-size:${props => !isNaN(buttonsize[props.size]) ? buttonsize[props.size] : buttonsize['normal'] };
+	font-size:${props => props.size in buttonsize ? buttonsize[props.size] : buttonsize['normal'] };
 	padding:10px 25px;
 	:hover {
 		background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
@@ -28,17 +29,7 @@ export const ButtonStyle = styled.button`
 		top:1px;
 	}
 
-	${props => props.stylization == 'artia' && 
-	css`
-	background:linear-gradient(to bottom, #00c1b3 5%, #04bdaf 100%);
-	background-color:#00c1b3;
-	color:#FFF;
-	:hover {
-		background:linear-gradient(to bottom, #00b6a9 5%, #00b6a9 100%);
-		background-color:#f6f6f6;
-	}
-	`
-	}
+	${props => props.theme in themes.Button && themes.Button[props.theme]}
 `;
 
 /* Inputs */
@@ -58,7 +49,7 @@ export const InputStyle = styled.input`
 `;
 
 /* Selects */
-export const pmrySelect = styled.button`
+export const SelectStyle = styled.select`
   
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
 	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
@@ -75,4 +66,23 @@ export const pmrySelect = styled.button`
     height: 40;
     outline: 50 solid;
     outline-color: '#303f9f';
+`;
+
+export const NavbarStyle = styled.header`
+  display: flex;
+  width: 100%;  
+  height: 10vh;
+  background-color: #F9F9F9;
+  align-items: center;
+
+  ${props => props.theme in themes.NavBar && themes.NavBar[props.theme]}
+`;
+
+export const ContainerStyle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: ${props => props.width };
+  height: ${props => props.height};
 `;

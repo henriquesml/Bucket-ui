@@ -1,9 +1,15 @@
 import React from 'react';
+import {NavbarStyle} from '../config/styles'
 
-// import { Container } from './styles';
+export default function NavBar(props) {
 
-export default function NavBar() {
   return (
-    <div />
+    <NavbarStyle
+      theme={props.theme}
+    >
+      <div style={{padding: 35}}>
+        {props.children}
+      </div>
+    </NavbarStyle>
   );
 }
