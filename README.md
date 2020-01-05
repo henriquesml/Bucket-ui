@@ -48,9 +48,9 @@ All contributions are welcome
 
 For more details read [License](/LICENSE.md)
 
-Copyright (c) 2019 [Henrique Schmeller](https://https://www.linkedin.com/in/henriqueschmeller
+Copyright (c) 2019 [Henrique Schmeller](www.linkedin.com/in/henriqueschmeller
 
 ## :art: **About Me**
 
-> Linkedin - [Henrique Schmeller](https://https://www.linkedin.com/in/henriqueschmeller) <br>
-> E-mail - [henrique_schmeller@hotmail.com](wendelfreitasbranco@gmail.com) <br>
+> Linkedin - [Henrique Schmeller](www.linkedin.com/in/henriqueschmeller) <br>
+> E-mail - [henrique_schmeller@hotmail.com](henrique_schmeller@hotmail.com) <br>
