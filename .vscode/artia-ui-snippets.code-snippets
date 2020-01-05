@@ -1,0 +1,33 @@
+{
+	"Functional Component": {
+		"prefix": ["rfc"],
+		"body": [
+			"import React from 'react'",
+			"",
+			"export default function $TM_FILENAME_BASE() {",
+			"  return (",
+			"    <div/>",
+			"  )",
+			"}"
+		],
+		"description": "Create React Functional Component"
+	},
+	"Div": {
+		"prefix": ["div"],
+		"body": [
+			"<div>",
+			"  ${Content:}",
+			"</div>"
+		],
+		"description": "HTML div"
+	},
+	"H1": {
+		"prefix": ["h1"],
+		"body": [
+			"<h1>",
+			"  ${Content:}",
+			"</h1>"
+		],
+		"description": "HTML h1"
+	}
+}

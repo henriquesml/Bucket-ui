@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {NavbarStyle} from '../config/styles'
 
+//TODO: adicionar PropsTypes
 export default function NavBar(props) {
 
   return (

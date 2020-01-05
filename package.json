@@ -43,6 +43,7 @@
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.23",
     "babel-plugin-module-resolver": "^4.0.0",
+    "emotion": "^10.0.27",
     "rollup-plugin-terser": "^5.1.3"
   }
 }

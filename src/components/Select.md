@@ -10,9 +10,3 @@ import {Select, Option} from "./Select";
     <Option value='001'>Banco do Brasil</Option>
 </Select>
 ```
-
-### Propriedades: 
-
-- Text, texto do botão
-- Size, tamanho do botão (small, normal e large)
-- stylization, estilos do botão (primary, artia)

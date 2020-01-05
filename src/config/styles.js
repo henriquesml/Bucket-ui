@@ -1,6 +1,13 @@
-import { css } from "@emotion/core";
+import { injectGlobal } from 'emotion'
 import styled from "@emotion/styled";
 import themes from '../themes'
+
+injectGlobal`
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+`
 
 /* Botões */
 const buttonsize = {
@@ -91,4 +98,17 @@ export const ContainerStyle = styled.div`
   flex-direction: ${props => props.direction != undefined ? props.direction : 'column' };
   width: ${props => props.width};
   height: ${props => props.height};
+`;
+
+export const StatusStyle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  ${props => props.size in  themes.Status.size ? themes.Status.size[props.size] : themes.Status.size['small'] };
+  ${props => props.status in  themes.Status ? themes.Status[props.status] : themes.Status['unknown'] };
+`;
+
+export const TextStyle = styled.div`
+ ${props => props.variant in  themes.Text && themes.Text[props.variant] };
 `;

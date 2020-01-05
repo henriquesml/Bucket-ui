@@ -27,3 +27,4 @@ import Container from "./Container";
     <h1 style={{color: '#333', fontFamily: 'sans-serif'}}>Padrão</h1>
   </Narbar>
 </Container>
+```
